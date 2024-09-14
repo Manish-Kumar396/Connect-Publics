@@ -1,0 +1,111 @@
+:root {
+  --white-clr: #edf2f6;
+  --black-clr: #494953;
+  --blue-clr: #6a7efc;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--black-clr);
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  min-height: 100vh;
+  background-color: var(--white-clr);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    45deg,
+    rgb(237, 242, 246, 0.6),
+    rgb(237, 242, 246, 0.6)
+  );
+  backdrop-filter: blur(45px);
+  position: fixed;
+  width: 100%;
+  padding: 1rem 4rem;
+  z-index: 999;
+}
+
+nav img {
+  width: 100px;
+}
+
+.nav__links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav__links ul li {
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  position: relative;
+  list-style: none;
+}
+
+.nav__links ul li a {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.nav__links ul li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--blue-clr);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav__links ul li:hover::after {
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6.2rem 4rem;
+}
+
+.hero__left h1 {
+  font-size: 62px;
+}
+
+.hero__left h1 .highlight {
+  color: var(--blue-clr);
+}
+
+.hero__left p {
+  font-size: 14px;
+  margin: 0.8rem 0 2.5rem;
+}
+
+.section-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.section-divider svg {
+  position: relative;
+  display: block;
+  width: calc(238% + 1.3px);
+  height: 107px;
+  transform: rotateY(180deg);
+}
+
+.section-divider .shape-fill {
+  fill: var(--blue-clr);
+}
